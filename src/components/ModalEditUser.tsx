@@ -33,23 +33,27 @@ const ModalEditUser = (props) => {
     }, [dataUserEdit])
     return (
         <div>
-            <Modal show={show} onHide={handleClose}>
+            <Modal 
+            show={show} 
+            onHide={handleClose}
+            backdrop={"static"}
+            keyboard={false}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Add new user</Modal.Title>
+                    <Modal.Title>Update user</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div className="body__add-new">
                         <div>
                             <form>
                                 <div className="form-group">
-                                    <label htmlFor="exampleInputName1">Name</label>
-                                    <input type="name" className="form-control" id="exampleInputName1" aria-describedby="nameHelp" placeholder="Enter name"
+                                    <label htmlFor="exampleInputName1">First Name</label>
+                                    <input type="name1" className="form-control" id="exampleInputName1" aria-describedby="nameHelp" placeholder="Enter name1"
                                         value={firstName} onChange={(event) => setFirstName(event.target.value)} />
 
                                 </div>
                                 <div className="form-group py-4">
-                                    <label htmlFor="exampleInputJob1">Job</label>
-                                    <input type="job" className="form-control" id="exampleInputJob1" placeholder="Job"
+                                    <label htmlFor="exampleInputJob1">Last Name</label>
+                                    <input type="name2" className="form-control" id="exampleInputName2" placeholder="name2"
                                         value={lastName} onChange={(event) => setLastName(event.target.value)} />
                                 </div>
                             </form>

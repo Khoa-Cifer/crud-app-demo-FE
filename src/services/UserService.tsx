@@ -11,4 +11,11 @@ const putEditUser = (name: string, job: string) => {
     return axios.put("/api/users/2", { name, job })
 }
 
-export { fetchAllUser, postCreateUser, putEditUser }
+const deleteUser = (id: unknown) => {
+    return axios.delete(`/api/users/${id}`)
+}
+
+const loginApi = (email, password) => {
+    return axios.post("/api/login", { email, password })
+}
+export { fetchAllUser, postCreateUser, putEditUser, deleteUser, loginApi }
